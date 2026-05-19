@@ -235,3 +235,35 @@ This retained information will be used only for legal compliance, fraud preventi
 
 Need Help?
 If you encounter any issues while trying to delete your account or have questions about the process, please contact our support team at oramadev.agency@gmail.com. We're here to help and ensure your privacy rights are respected.
+
+12. DRIVER BACKGROUND LOCATION TRACKING
+
+In Short: Only approved delivery drivers who are online and actively delivering an order may share live location, including in the background when permitted by the device, so customers can track that order.
+
+uniqque provides a live map so customers can follow an active delivery. This section explains how location tracking works, who it applies to, what data is collected, how long it is kept, and how you can control it.
+
+Who is affected
+- Delivery drivers (and delivery admins acting as drivers): may use background location only while online and actively tracking an accepted order.
+- Customers and guests: may grant foreground location to set or confirm a delivery address or view a map; they do not publish live driver-style background tracking through this feature.
+
+When tracking starts and stops
+- Tracking typically starts when a driver accepts an order or opens directions for an active delivery, after the app shows a clear disclosure and the driver grants location permissions (including "Always" / background access where required by the operating system).
+- Only one active order is tracked at a time for a driver account.
+- Tracking stops when the order is delivered or cancelled, the driver goes offline, the driver uses "Stop tracking" (where shown), device location services are turned off, or the driver logs out (which may clear live location for active orders).
+
+What location data we collect
+- For the active order only, we process precise GPS coordinates (latitude and longitude), a driver identifier, and a timestamp.
+- We do not use this live tracking for advertising, unrelated analytics, or selling location data.
+
+How data is stored and shared
+- Live location updates are sent to Firebase Realtime Database (Google) under a per-order path so the customer linked to that order can view the driver's position on the in-app map.
+- Customers can see location only for their own active order and only while tracking is active; when tracking ends, the live location entry for that order is removed or no longer updated.
+
+Android and iOS behavior
+- Android: while background tracking is active, a persistent notification may show that delivery tracking is running; you can stop tracking from that notification where available.
+- iOS: the system may show the location-in-use indicator while tracking is active; background updates require the location permissions you approve in Settings.
+
+Your choices
+- Drivers can revoke background or location permissions at any time in device Settings; doing so may prevent live tracking and limit use of driver delivery features.
+- Drivers can go offline in the app or stop an active tracking session to end location sharing for current orders.
+- If you have questions or want to exercise privacy rights related to location data, contact us at oramadev.agency@gmail.com.
